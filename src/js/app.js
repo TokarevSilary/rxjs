@@ -26,15 +26,19 @@ function messageRender(data) {
 const messagesUnread = interval(10000).pipe(
   startWith(0),
   switchMap(() =>
-    ajax.getJSON("http://localhost:7070/messages/unread").pipe(
-      catchError(() => {
-        return of({
-          status: "not ok",
-          timestamp: Math.floor(Date.now() / 1000),
-          messages: [],
-        });
-      }),
-    ),
+    ajax
+      .getJSON(
+        "https://rxjs-server-fake-messages.onrender.com//messages/unread",
+      )
+      .pipe(
+        catchError(() => {
+          return of({
+            status: "not ok",
+            timestamp: Math.floor(Date.now() / 1000),
+            messages: [],
+          });
+        }),
+      ),
   ),
 );
 

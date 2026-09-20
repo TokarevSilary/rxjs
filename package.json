@@ -12,7 +12,8 @@
     "preshow:coverage": "npm run coverage",
     "show:coverage": "live-server coverage/lcov-report",
     "preshow:dist": "npm run build",
-    "show:dist": "http-server dist"
+    "show:dist": "http-server dist",
+    "pretty": "npx prettier . --write"
   },
   "author": "coursar",
   "license": "MIT",
