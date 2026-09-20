@@ -1,0 +1,27 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-size: 14px;
+}
+
+h2 {
+  font-size: 17px;
+}
+
+.root {
+  margin: 0 auto;
+  width: 600px;
+}
+
+.messages-cover {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 16px;
+  border: 1px black solid;
+  align-items: center;
+  padding: 10px;
+}
+
+.message-time{
+  text-align: right;
+}
