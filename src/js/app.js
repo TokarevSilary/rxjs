@@ -28,7 +28,7 @@ const messagesUnread = interval(10000).pipe(
   switchMap(() =>
     ajax
       .getJSON(
-        "https://rxjs-server-fake-messages.onrender.com//messages/unread",
+        "https://rxjs-server-fake-messages.onrender.com/messages/unread",
       )
       .pipe(
         catchError(() => {
